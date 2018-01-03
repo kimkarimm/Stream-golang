@@ -12,7 +12,9 @@ var Session *gocql.Session
 func init() {
 	var err error
 
-	cluster := gocql.NewCluster("172.16.43.2")
+	//cluster := gocql.NewCluster("172.30.80.208")
+	//env := os.Getenv("")
+	cluster := gocql.NewCluster("cassandra")
 	cluster.Keyspace = "streamdemoapi"
 	Session, err = cluster.CreateSession()
 	if err != nil {

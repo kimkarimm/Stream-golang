@@ -5,8 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"Stream-golang/app/Cassandra"
-
+	"github.com/Stream-golang/app/Cassandra"
 	"github.com/gocql/gocql"
 	"github.com/gorilla/mux"
 )
@@ -18,8 +17,8 @@ import (
 func Get(w http.ResponseWriter, r *http.Request) {
 	var userList []User
 	m := map[string]interface{}{}
-
 	query := "SELECT id,age,firstname,lastname,city,email FROM users"
+	//info, err := conn.prepareStatement(context.Background(), "SELECT id,age,firstname,lastname,city,email FROM users", nil)
 	iterable := Cassandra.Session.Query(query).Iter()
 	for iterable.MapScan(m) {
 		userList = append(userList, User{

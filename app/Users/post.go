@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"Stream-golang/app/Cassandra"
+	"github.com/Stream-golang/app/Cassandra"
 
 	"github.com/gocql/gocql"
 )

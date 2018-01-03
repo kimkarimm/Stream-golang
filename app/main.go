@@ -15,10 +15,11 @@ import (
 	"log"
 	"net/http"
 
-	"Stream-golang/app/Cassandra"
-	"Stream-golang/app/Messages"
-	"Stream-golang/app/Stream"
-	"Stream-golang/app/Users"
+	"github.com/Stream-golang/app/Messages"
+	"github.com/Stream-golang/app/Stream"
+	"github.com/Stream-golang/app/Users"
+
+	"github.com/Stream-golang/app/Cassandra"
 
 	"github.com/gorilla/mux"
 )
